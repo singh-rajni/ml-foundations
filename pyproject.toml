@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rajni-ml-foundations"
+version = "0.1.0"
+description = "Interview-focused machine learning foundations curriculum"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=2.0,<3",
+  "pandas>=2.0,<3",
+  "matplotlib>=3.8,<4",
+  "scikit-learn>=1.6,<2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
